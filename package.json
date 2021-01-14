@@ -1,6 +1,8 @@
 {
-  "name": "myFirstVite",
+  "name": "my-first-vite",
   "version": "0.0.0",
+  "author": "u-sho",
+  "private": true,
   "scripts": {
     "dev": "vite",
     "build": "vuedx-typecheck . && vite build"
