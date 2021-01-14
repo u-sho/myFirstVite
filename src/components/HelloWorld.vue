@@ -2,13 +2,22 @@
   <h1>{{ msg }}</h1>
 
   <p>
-    <a href="https://vitejs.dev/guide/features.html" target="_blank">Vite Documentation</a> |
-    <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Documentation</a>
+    <a
+      href="https://vitejs.dev/guide/features.html"
+      target="_blank"
+    >Vite Documentation</a> |
+    <a
+      href="https://v3.vuejs.org/"
+      target="_blank"
+    >Vue 3 Documentation</a>
   </p>
 
   <p>
     Recommended setup:
-    <a href="https://code.visualstudio.com/" target="_blank">VSCode</a>
+    <a
+      href="https://code.visualstudio.com/"
+      target="_blank"
+    >VSCode</a>
     +
     <a
       href="https://marketplace.visualstudio.com/items?itemName=octref.vetur"
@@ -26,9 +35,11 @@
       href="https://github.com/znck/vue-developer-experience"
       target="_blank"
     >@vuedx</a>.
-    <br />Note @vuedx is still experimental and this setup is provided for early feedback.
+    <br>Note @vuedx is still experimental and this setup is provided for early feedback.
   </p>
-  <button @click="count++">count is: {{ count }}</button>
+  <button @click="count++">
+    count is: {{ count }}
+  </button>
   <p>
     Edit
     <code>components/HelloWorld.vue</code> to test hot module replacement.
@@ -43,11 +54,13 @@ export default defineComponent({
   props: {
     msg: {
       type: String,
-      required: true
+      required: true,
     }
   },
   setup: () => {
     const count = ref(0)
+    const increment = () => count.value++
+
     return { count }
   }
 })
