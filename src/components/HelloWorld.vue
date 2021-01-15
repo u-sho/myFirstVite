@@ -37,8 +37,17 @@
     >@vuedx</a>.
     <br>Note @vuedx is still experimental and this setup is provided for early feedback.
   </p>
-  <button @click="count++">
-    count is: {{ count }}
+  <p>
+    Count is: {{ count }}
+  </p>
+  <button @click="increment">
+    increment count
+  </button>
+  <button @click="decrement">
+    decrement count
+  </button>
+  <button @click="reset">
+    reset count
   </button>
   <p>
     Edit
@@ -47,7 +56,8 @@
 </template>
 
 <script lang="ts">
-import { ref, defineComponent } from 'vue'
+import { defineComponent } from 'vue'
+import simpleCounter from "../composables/simpleCounter"
 
 export default defineComponent({
   name: 'HelloWorld',
@@ -58,10 +68,8 @@ export default defineComponent({
     }
   },
   setup: () => {
-    const count = ref(0)
-    const increment = () => count.value++
-
-    return { count }
+    const { count, increment, decrement, reset } = simpleCounter()
+    return { count, increment, decrement, reset }
   }
 })
 </script>
