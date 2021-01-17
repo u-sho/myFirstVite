@@ -57,14 +57,14 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import simpleCounter from "../composables/simpleCounter"
+import simpleCounter from '../composables/simpleCounter'
 
 export default defineComponent({
   name: 'HelloWorld',
   props: {
     msg: {
       type: String,
-      required: true,
+      required: true
     }
   },
   setup: () => {

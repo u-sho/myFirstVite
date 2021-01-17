@@ -12,24 +12,32 @@
   ],
   "parser": "vue-eslint-parser",
   "parserOptions": {
-    "ecmaVersion": 2021,
+    "parser": "@typescript-eslint/parser",
     "sourceType": "module",
+    "ecmaVersion": 2021,
+    "ecmaFeatures": {
+      "impliedStrict": true
+    },
     "vueFeatures": {
       "filter": false,
       "interpolationAsNonHTML": true
     }
   },
-  "extends": "plugin:vue/vue3-recommended",
+  "extends": [
+    "plugin:vue/vue3-recommended",
+    "eslint:recommended",
+    "@vue/typescript/recommended"
+  ],
   "rules": {
+    "vue/comment-directive": ["error", {
+      "reportUnusedDisableDirectives": true
+    }],
     "no-restricted-globals": [
       "error",
       "window",
       "document",
       "module",
       "require"
-    ],
-    "vue/comment-directive": ["error", {
-      "reportUnusedDisableDirectives": true
-    }]
+    ]
   }
 }

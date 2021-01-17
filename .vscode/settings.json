@@ -4,4 +4,6 @@
     "typescript",
     "vue"
   ],
+  "vetur.experimental.templateInterpolationService": true,
+  "vetur.validation.template": false
 }
