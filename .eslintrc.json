@@ -1,4 +1,15 @@
 {
+  "root": true,
+  "ignorePatterns": [
+    ".git",
+    "node_modules",
+    ".DS_Store",
+    "dist",
+    "dist-ssr",
+    "*.local",
+    "yarn.lock",
+    "*.log"
+  ],
   "parser": "vue-eslint-parser",
   "parserOptions": {
     "ecmaVersion": 2021,
@@ -8,15 +19,6 @@
       "interpolationAsNonHTML": true
     }
   },
-  "ignorePatterns": [
-    ".git",
-    "node_modules",
-    ".DS_Store",
-    "dist",
-    "dist-ssr",
-    "*.local",
-    "yarn.lock"
-  ],
   "extends": "plugin:vue/vue3-recommended",
   "rules": {
     "no-restricted-globals": [
@@ -29,6 +31,5 @@
     "vue/comment-directive": ["error", {
       "reportUnusedDisableDirectives": true
     }]
-  },
-  "overrides": []
+  }
 }
