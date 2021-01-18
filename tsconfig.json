@@ -3,11 +3,21 @@
     "target": "esnext",
     "module": "esnext",
     "moduleResolution": "node",
-    "strict": true,
-    "jsx": "preserve",
+    "allowSyntheticDefaultImports": true,
+    "importHelpers": true,
     "sourceMap": true,
+
+    "strict": true,
+    "alwaysStrict": true,
+    "skipLibCheck": true,
     "lib": ["esnext", "dom"],
     "types": ["vite/client"],
+
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./*"],
+      "@/*": ["src/*"],
+    },
     "plugins": [{ "name": "@vuedx/typescript-plugin-vue" }]
   },
   "include": [

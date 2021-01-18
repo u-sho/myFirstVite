@@ -24,8 +24,8 @@
     }
   },
   "extends": [
-    "plugin:vue/vue3-recommended",
     "eslint:recommended",
+    "plugin:vue/vue3-recommended",
     "@vue/typescript/recommended"
   ],
   "rules": {
