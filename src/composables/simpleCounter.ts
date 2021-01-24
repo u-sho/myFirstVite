@@ -1,21 +1,21 @@
 import { Ref, ref } from 'vue'
 
 interface SimpleCounter {
-  count: Ref<number>,
+  count    : Ref<number>,
   decrement: () => void,
   increment: () => void,
-  reset: () => void
+  reset    : () => void
 }
 
 export default function simpleCounter(): SimpleCounter {
-  // state
-  const INITIAL_COUNT=0
+  // State
+  const INITIAL_COUNT = 0
   const count = ref(INITIAL_COUNT)
 
-  // methods
-  const decrement = () => { count.value-- }
-  const increment = () => { count.value++ }
-  const reset = () => { count.value = INITIAL_COUNT }
+  // Methods
+  const decrement = (): void => { count.value-- }
+  const increment = (): void => { count.value++ }
+  const reset = (): void => { count.value = INITIAL_COUNT }
 
   return {
     count,
