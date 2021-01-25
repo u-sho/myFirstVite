@@ -193,6 +193,7 @@ module.exports = {
     'no-underscore-dangle'   : OFF,
     'no-unused-vars'         : OFF,
     'no-useless-computed-key': OFF,
+    'sort-imports'           : OFF,
 
     // Vue Uncategorized rules
     'vue/block-tag-newline': [ERROR,
@@ -324,7 +325,6 @@ module.exports = {
       rules: {
         'indent'       : OFF,
         'max-len'      : OFF,
-        'sort-imports' : OFF,
         'sort-keys'    : OFF,
         'vue/sort-keys': ERROR
       }
