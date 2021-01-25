@@ -75,10 +75,7 @@ export default defineComponent({
     }
   },
 
-  setup: () => {
-    const { count, increment, decrement, reset } = simpleCounter()
-    return { count, increment, decrement, reset }
-  }
+  setup: () => ({ ...simpleCounter })
 })
 </script>
 
