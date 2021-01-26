@@ -199,7 +199,10 @@ module.exports = {
       { reportUnusedDisableDirectives: true }],
     'vue/component-name-in-template-casing': [ERROR,
       'PascalCase',
-      { registeredComponentsOnly: false }],
+      {
+        ignores                 : ['router-view', 'router-link'],
+        registeredComponentsOnly: false
+      }],
     'vue/custom-event-name-casing'    : ERROR,
     'vue/html-comment-content-newline': ERROR,
     'vue/html-comment-content-spacing': ERROR,
@@ -274,8 +277,9 @@ module.exports = {
     'vue/no-restricted-v-bind'      : ERROR,
     'vue/no-static-inline-styles'   : ERROR,
     'vue/no-template-target-blank'  : ERROR,
-    'vue/no-unregistered-components': ERROR,
-    'vue/no-unsupported-features'   : [ERROR,
+    'vue/no-unregistered-components': [ERROR,
+      { ignorePatterns: ['router-link', 'router-view'] }],
+    'vue/no-unsupported-features': [ERROR,
       {
         version: dependencies.vue,
         ignores: [
