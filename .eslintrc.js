@@ -93,14 +93,6 @@ module.exports = {
         beforeBlockComment: true,
         beforeLineComment : true
       }],
-    'max-len': [ERROR,
-      {
-        tabWidth              : 2,
-        ignoreUrls            : true,
-        ignoreStrings         : true,
-        ignoreTemplateLiterals: true,
-        ignoreRegExpLiterals  : true
-      }],
     'max-lines-per-function': [ERROR,
       {
         max           : 20,
@@ -186,6 +178,7 @@ module.exports = {
     // eslint-disable-next-line sort-keys
     'default-case'           : OFF,
     'guard-for-in'           : OFF,
+    'max-len'                : OFF,
     'no-continue'            : OFF,
     'no-multi-spaces'        : OFF,
     'no-plusplus'            : OFF,
@@ -218,6 +211,7 @@ module.exports = {
       }],
     'vue/max-len': [ERROR,
       {
+        tabWidth                 : INDENT_SPACES,
         ignoreUrls               : true,
         ignoreStrings            : true,
         ignoreTemplateLiterals   : true,
@@ -300,7 +294,6 @@ module.exports = {
     'vue/padding-line-between-blocks': ERROR,
     'vue/require-direct-export'      : OFF,
     'vue/require-name-property'      : ERROR,
-    'vue/script-indent'              : ERROR,
     'vue/static-class-names-order'   : OFF,
     'vue/v-for-delimiter-style'      : ERROR,
     'vue/v-on-event-hyphenation'     : [ERROR,
@@ -323,10 +316,11 @@ module.exports = {
     {
       files: ['*.vue'],
       rules: {
-        'indent'       : OFF,
-        'max-len'      : OFF,
-        'sort-keys'    : OFF,
-        'vue/sort-keys': ERROR
+        'indent'           : OFF,
+        'max-len'          : OFF,
+        'sort-keys'        : OFF,
+        'vue/script-indent': ERROR,
+        'vue/sort-keys'    : ERROR
       }
     }
   ]
